@@ -1,15 +1,37 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage';
-import HomePage2 from './pages/HomePage2';
+
 import Navbar from './components/Navbar';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
     <div>
-   
-     <HomePage/>
-    
+        <Router>
+    <Routes>
+      
+      
+        {/* A <Routes> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        
+          {/* <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/customize">
+            <Customizer />
+          </Route> */}
+          <Route path='/' element={<HomePage />} />
+       
+      
+    </Routes>
+</Router>    
     </div>
   );
 }
