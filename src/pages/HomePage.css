@@ -1,0 +1,119 @@
+.flex-container {
+    margin-top: 5rem;
+    height: 80rem;
+    width:100%;
+    display: flex;
+    align-items: center; 
+    justify-content:center;
+}
+
+.text-container {
+    font-family: 'Anton';
+    display: flex;
+    flex-direction: column;
+    width: 40%;   
+}
+.text-container-2 {
+    font-family: 'Anton';
+    display: flex;
+    flex-direction: column;
+    width: 40%; 
+}
+
+.main-image-1 {
+    width: 55rem;
+}
+
+.home-page-title {
+    text-align: left;
+    font-size: 6rem;
+    text-transform: uppercase;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; 
+    color: #363E44;
+    letter-spacing: 1.5rem;
+}
+
+.home-page-title-2 {
+    text-align: right;
+    font-size: 6rem;
+    text-transform: uppercase;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; 
+    color: #363E44;
+    letter-spacing: 1.5rem;
+}
+
+.paragraph {
+    text-align: right;
+    display: block;
+    max-width: 40rem;
+    align-self: flex-end;  
+}
+
+.home-page-title-small {
+    text-transform: uppercase;
+    color:#363E44;
+    letter-spacing: 0.5rem;
+    text-align: left;
+    margin-top: 3rem;
+    font-size: 3rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; 
+} 
+.main-btn {
+    padding: 1.5rem 4rem;
+    border-radius: 15px;
+    border:none;
+    background-color: #84524D;
+    font-size: 2rem;
+    color: white;
+    align-self: flex-start;
+    margin-top: 3rem;
+} 
+
+.second-btn {
+    padding: 1.5rem 4rem;
+    border-radius: 15px;
+    border:none;
+    background-color: #D87355;
+    font-size: 2rem;
+    color: white;
+    align-self: flex-end;
+    margin-top: 3rem;
+}
+.main-btn:hover, .second-btn:hover {
+    cursor:pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem #363E44;
+    transition: all .2s;
+    background-color: #363E44
+}  
+
+.main-btn:active, .second-btn:active {
+    transform: translate(-1px); 
+}
+
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translate(5rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } 
+    
+    }
+                   
+
+
