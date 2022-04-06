@@ -1,7 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import HomePage from './pages/HomePage';
 
-import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import Customizer from './components/Customizer';
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -14,24 +14,16 @@ import {
 function App() {
   return (
     <div>
-        <Router>
-    <Routes>
-      
-      
-        {/* A <Routes> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        
-          {/* <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/customize">
-            <Customizer />
-          </Route> */}
-          <Route path='/' element={<HomePage />} />
+      <Router>
+        <Routes>
+
+
        
-      
-    </Routes>
-</Router>    
+          <Route path='/' element={<HomePage />} />
+          <Route path='/customizer' element={<Customizer />}   
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }

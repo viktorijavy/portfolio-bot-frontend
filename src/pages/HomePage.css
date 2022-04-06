@@ -17,11 +17,13 @@
     font-family: 'Anton';
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     width: 40%; 
+    
 }
 
 .main-image-1 {
-    width: 55rem;
+    width: 60rem;
 }
 
 .home-page-title {
@@ -31,7 +33,9 @@
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; 
-    color: #363E44;
+    background-image: linear-gradient(to right, #303A5E, #555A94);
+    -webkit-background-clip: text;
+    color: transparent;
     letter-spacing: 1.5rem;
 }
 
@@ -42,13 +46,15 @@
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; 
-    color: #363E44;
     letter-spacing: 1.5rem;
+    background-image: linear-gradient(to right, #38618C, #555A94 );
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .paragraph {
-    text-align: right;
-    display: block;
+    /* text-align: right; */
+    /* display: block; */
     max-width: 40rem;
     align-self: flex-end;  
 }
@@ -68,7 +74,7 @@
     padding: 1.5rem 4rem;
     border-radius: 15px;
     border:none;
-    background-color: #84524D;
+    background-color: #555A94;
     font-size: 2rem;
     color: white;
     align-self: flex-start;
@@ -79,10 +85,10 @@
     padding: 1.5rem 4rem;
     border-radius: 15px;
     border:none;
-    background-color: #D87355;
+    background-color: #38618C;
     font-size: 2rem;
     color: white;
-    align-self: flex-end;
+    margin-right: 1rem;
     margin-top: 3rem;
 }
 .main-btn:hover, .second-btn:hover {

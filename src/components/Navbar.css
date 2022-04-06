@@ -1,7 +1,7 @@
 .navbar {
     overflow: hidden;
     height: 5rem;
-    background-color: rgba(54,62,68, 0.9);
+    background-color: rgba(48,58,94, 0.9);  
     width: 100%;
     display: flex;
     justify-content: space-between;

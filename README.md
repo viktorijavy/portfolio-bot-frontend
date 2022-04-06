@@ -9,7 +9,9 @@
 1. Share function.
 
 Todos
-Basic react inputs bound to component presentation on the lft
-keep the presenetation mudular, since we must create html from it later
-proof of concept: react rendering in the backend
-optional: create pdf
+- Create customizer component 
+- create two components for customerizer form and customeizer presentation
+- Basic react inputs bound to component presentation on the lft
+keep the customizer presentention mudular, since we must create html from it later
+- proof of concept: react rendering in the backend
+- optional: create pdf

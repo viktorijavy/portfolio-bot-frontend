@@ -1,10 +1,8 @@
 import './HomePage.css'
 import Navbar from '../components/Navbar'
-import pic from '../landing-page-pic-1.png'
-import pic2 from '../pic2.png'
-
-
-
+import pic from '../programmer-1.png'
+import pic2 from '../programmer-2.png'
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
     return (
@@ -34,8 +32,8 @@ const HomePage = () => {
                     <h1 className='home-page-title-2'>Another Title Hereeeeee</h1>
                     <p className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, odio?  
                     accusamuio! tur adipisicing elit. Possimus, odio?  accusamuio</p>
-                    <button className='second-btn'>Get started</button>
-                    
+                   <Link to="/customizer"> <button className='second-btn'>Get started</button></Link>
+                  
                 </div>
 
             </div> 

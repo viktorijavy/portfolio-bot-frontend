@@ -1,0 +1,19 @@
+.main-container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(48, 58, 94, 0.9);
+
+  height: 100vh;
+}
+
+.customizer-container {
+  width: 85%;
+  height: 70rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
