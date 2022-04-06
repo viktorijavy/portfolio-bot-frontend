@@ -1,5 +1,5 @@
 import './PresentationProjects.css'
-import projectImg from '../project-img.png'
+
 
 
 const PresentationProjects = props => {
@@ -23,7 +23,7 @@ const PresentationProjects = props => {
 
                 </div>
                 <div className="project-image-box">
-                    <img className="project-img" src={projectImg} alt="projectImg" />
+                    <img className="project-img" src="https://placekitten.com/200/200" alt="projectImg" />
                 </div>
 
             </div>

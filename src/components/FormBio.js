@@ -15,7 +15,11 @@ const FormBio = props => {
         
         <div className="form-container">
         
-            <form className="form">
+            <form 
+            onSubmit={(e)=>{
+                props.increaseProgress(e)
+            }}
+            className="form">
             
                 <div className="form-item">
                     <label htmlFor="name"> Your name</label>
@@ -23,6 +27,7 @@ const FormBio = props => {
                         className="form-input"
                         placeholder="Your name"
                         type="text"
+                        name="name"
                         // value={props.name}
                         onChange={props.handleNameChange}
                     />
@@ -34,6 +39,7 @@ const FormBio = props => {
                         className="form-input"
                         placeholder="Your name"
                         type="file"
+                        name="picture"
                         // value={props.name}
                         onChange={props.handleNameChange}
                     />
@@ -45,6 +51,7 @@ const FormBio = props => {
                         className="form-input"
                         placeholder="Your occupation"
                         type="text"
+                        name="occupation"
                         // value={props.occupation}
                         onChange={props.handleOccupationChange}
                     />
@@ -56,6 +63,7 @@ const FormBio = props => {
                         className="form-input"
                         placeholder="City"
                         type="text"
+                        name="city"
                         onChange={props.handleCityChange}
                     />
                 </div>
@@ -66,12 +74,13 @@ const FormBio = props => {
                         className="form-input"
                         placeholder="Add something about you"
                         type="text"
+                        name="about"
                         // value={props.about}
                         onChange={props.handleAboutChange}
                     />
                 </div>
 
-                <button className="next-btn" type="submit">Next</button>
+                <button className="next-btn"  type="submit">Next</button>
             </form>
             </div>
         </>
