@@ -3,21 +3,17 @@ import './FormBio.css'
 
 const FormProjects = props => {
 
-    // const [name, setName] = useState('');
-    // const [occupation, setOccupation] = useState('');
-    // const [city, setCity] = useState('');
-    // const [about, setAbout] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [imageUrl, setImageUrl] = useState();
 
     return (
         <>
 
             <div className="form-container">
 
-                <form onSubmit={(e) => {
+                <form 
+                    className="form"
+                    onSubmit={(e) => {
                     props.increaseProgress(e)
-                }} className="form">
+                }}>
 
                     <div className="form-item">
                         <label htmlFor="name">Project Name</label>
@@ -25,7 +21,6 @@ const FormProjects = props => {
                             className="form-input"
                             placeholder="Project Name"
                             type="text"
-                            // value={props.name}
                             name="projectname"
                             onChange={props.handleProjectNameChange}
                         />
@@ -44,23 +39,46 @@ const FormProjects = props => {
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="occupation"> Add an image</label>
+                        <label htmlFor="image"> Add an image</label>
                         <input
                             className="form-input"
-                            placeholder="Your occupation"
+                            placeholder="add image"
                             type="file"
-                        // value={props.occupation}
-
+                            name="projectimage"
                         />
+
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="city"> Technologies </label>
+                        <label htmlFor="technologies"> Technologies </label>
                         <input
                             className="form-input"
                             placeholder="Which technologies did you use?"
                             type="text"
+                            name="technologies"
+                            onChange={props.handleTechnologiesChange}
+                        />
+                    </div>
 
+                    <div className="form-item">
+                        <label htmlFor="demo"> Github </label>
+                        <input
+                            className="form-input"
+                            placeholder="Add a link to a github repo"
+                            type="text"
+                            name="code"
+                            onChange={props.handleLink1Change}
+                        />
+                    </div>
+
+                    <div className="form-item">
+                        <label htmlFor="code-link"> Code </label>
+                        <input
+                            className="form-input"
+                            placeholder="Add a link to a demo"
+                            type="text"
+                            name="demo"
+                            onChange={props.handleLink2Change}
                         />
                     </div>
 

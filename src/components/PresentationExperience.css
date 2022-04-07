@@ -1,0 +1,37 @@
+.experience-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-size: 2rem;
+    
+}
+
+.experience-title {
+    width: 50%;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.experience-text {
+    width: 50%;
+}
+/* .company {
+    font-style: italic;
+    font-weight:300;
+} */
+.role {
+    font-weight:700;
+    font-size: 2.5rem;
+}
+.date {
+    font-size: 1.5rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+
+.job-tasks li {
+  list-style:circle inside;
+  
+}
