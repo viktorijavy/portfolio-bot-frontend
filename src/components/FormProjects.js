@@ -22,7 +22,9 @@ const FormProjects = props => {
                             placeholder="Project Name"
                             type="text"
                             name="projectname"
-                            onChange={props.handleProjectNameChange}
+                            onChange={e=>{
+                                props.setform({...props.form, [e.target.name]: e.target.value})
+                                }}
                         />
                     </div>
 
@@ -33,7 +35,9 @@ const FormProjects = props => {
                             placeholder="Describe your project shortly"
                             type="text"
                             name="projectdescription"
-                            onChange={props.handleProjectDescription}
+                            onChange={e=>{
+                                props.setform({...props.form, [e.target.name]: e.target.value})
+                                }}
 
                         />
                     </div>
@@ -56,7 +60,9 @@ const FormProjects = props => {
                             placeholder="Which technologies did you use?"
                             type="text"
                             name="technologies"
-                            onChange={props.handleTechnologiesChange}
+                            onChange={e=>{
+                                props.setform({...props.form, [e.target.name]: e.target.value})
+                                }}
                         />
                     </div>
 
@@ -67,7 +73,9 @@ const FormProjects = props => {
                             placeholder="Add a link to a github repo"
                             type="text"
                             name="code"
-                            onChange={props.handleLink1Change}
+                            onChange={e=>{
+                                props.setform({...props.form, [e.target.name]: e.target.value})
+                                }}
                         />
                     </div>
 
@@ -78,7 +86,9 @@ const FormProjects = props => {
                             placeholder="Add a link to a demo"
                             type="text"
                             name="demo"
-                            onChange={props.handleLink2Change}
+                            onChange={e=>{
+                                props.setform({...props.form, [e.target.name]: e.target.value})
+                                }}
                         />
                     </div>
 

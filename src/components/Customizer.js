@@ -14,6 +14,7 @@ import PresentationEducation from './PresentationEducation';
 const Customizer = () => {
 
     const [progress, setProgress] = useState(0)
+    const [form, setform] = useState({})
     const [userObject, setuserObject] = useState({})
 
     //bio states
@@ -179,7 +180,6 @@ const Customizer = () => {
     console.log(userObject);
 
 
-
     return (
         <div className="main-container-flex">
 
@@ -203,19 +203,11 @@ const Customizer = () => {
 
                 {progress === 1 && (<>
                     <PresentationProjects
-                        name={projectName}
-                        description={projectDescription}
-                        technologies={technologies}
-                        link1={link1}
-                        link2={link2}
+                        form={form}
                     />
                     <FormProjects
-                        handleProjectNameChange={handleProjectNameChange}
-                        handleProjectDescription={handleProjectDescription}
-                        increaseProgress={increaseProgress}
-                        handleTechnologiesChange={handleTechnologiesChange}
-                        handleLink1Change={handleLink1Change}
-                        handleLink2Change={handleLink2Change}
+                    form={form}
+                    setform={setform}
 
                     />
                 </>)}
@@ -237,7 +229,7 @@ const Customizer = () => {
                         handleEndDateChange={handleEndDateChange}
                         handleTask1Change={handleTask1Change}
                         handleTask2Change={handleTask2Change}
-                        handleTask3Change={handleTask3Change}
+                        handleTask3Change={handleTask3Change}increaseProgress={increaseProgress}
 
                     />
 

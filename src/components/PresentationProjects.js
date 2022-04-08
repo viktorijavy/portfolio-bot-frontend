@@ -10,14 +10,14 @@ const PresentationProjects = props => {
             <div className="project-box">
 
                 <div className="project-text">
-                    <h1>{props.name}</h1>
-                    <p className="project-description"> {props.description}</p>
+                    <h1>{props.form.projectname}</h1>
+                    <p className="project-description"> {props.form.projectdescription}</p>
                     <div className="project-technologies">
                     Made with: 
-                    <p> {props.technologies }</p>
+                    <p> {props.form.technologies }</p>
                     </div>
                     <div className="project-links">
-                        <a href={props.link1}> <img src={logo} alt="" className='github-logo' /> </a>
+                        <a href={props.form.link1}> <img src={logo} alt="" className='github-logo' /> </a>
                     </div>
 
                 </div>
