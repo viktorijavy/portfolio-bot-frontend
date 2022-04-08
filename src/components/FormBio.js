@@ -3,12 +3,6 @@ import './FormBio.css';
 
 const FormBio = props => {
 
-    // const [name, setName] = useState('');
-    // const [occupation, setOccupation] = useState('');
-    // const [city, setCity] = useState('');
-    // const [about, setAbout] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [imageUrl, setImageUrl] = useState();
 
     return (
         <>
@@ -28,7 +22,7 @@ const FormBio = props => {
                         placeholder="Your name"
                         type="text"
                         name="name"
-                        // value={props.name}
+                        
                         onChange={props.handleNameChange}
                     />
                 </div>
@@ -40,7 +34,7 @@ const FormBio = props => {
                         placeholder="Your name"
                         type="file"
                         name="picture"
-                        // value={props.name}
+                      
                         onChange={props.handleNameChange}
                     />
                 </div>
@@ -52,7 +46,7 @@ const FormBio = props => {
                         placeholder="Your occupation"
                         type="text"
                         name="occupation"
-                        // value={props.occupation}
+                        
                         onChange={props.handleOccupationChange}
                     />
                 </div>
@@ -75,7 +69,7 @@ const FormBio = props => {
                         placeholder="Add something about you"
                         type="text"
                         name="about"
-                        // value={props.about}
+                        
                         onChange={props.handleAboutChange}
                     />
                 </div>

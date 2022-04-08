@@ -2,15 +2,22 @@
     width: 30%;
     background-color: #ced4da;  
     border-radius: 15px;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .form {
-    margin: 15rem 2rem;
-    
+    width: 90%;
+}
+
+.tasks-label {
+    margin: 1.5rem 0;
 }
 
 .form-item{
+    width: 90%;
     display: flex;
     flex-direction: column;
     margin-top: 1rem;

@@ -1,5 +1,6 @@
 import './PresentationProjects.css'
-
+import projectpic from '../NewsApp3.jpg'
+import logo from '../GitHub_Logo.png'
 
 
 const PresentationProjects = props => {
@@ -13,17 +14,15 @@ const PresentationProjects = props => {
                     <p className="project-description"> {props.description}</p>
                     <div className="project-technologies">
                     Made with: 
-                        <ul className="technologies-list">
-                            <li className="technologie-list-item"> HMTL</li>
-                            <li className="technologie-list-item"> CSS</li>
-                            <li className="technologie-list-item"> JavaScript</li>
-                        </ul>
+                    <p> {props.technologies }</p>
                     </div>
-                    <div className="project-links"> Links: github, demo</div>
+                    <div className="project-links">
+                        <a href={props.link1}> <img src={logo} alt="" className='github-logo' /> </a>
+                    </div>
 
                 </div>
                 <div className="project-image-box">
-                    <img className="project-img" src="https://placekitten.com/200/200" alt="projectImg" />
+                    <img className="project-img" src={projectpic} alt="projectImg" />
                 </div>
 
             </div>
