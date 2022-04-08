@@ -8,15 +8,15 @@ const PresentationExperience = props => {
 
             <h1 className="experience-title">EXPERIENCE</h1>
                 <div className="experience-text">
-                    <p className="line role">{props.role}</p>
-                    <p className="company"> {props.company}</p>
-                    <p className="line date"> {props.startDate} {props.endDate}</p>
+                    <p className="line role">{props.form.role}</p>
+                    <p className="company"> {props.form.company}</p>
+                    <p className="line date"> {props.form.startdate} {props.enddate}</p>
                     
                        
                         <ul className="job-tasks">
-                            <li className="list-margin"> {props.task1}</li>
-                            <li className="list-margin"> {props.task2}</li>
-                            <li className="list-margin"> {props.task3}</li>
+                            <li className="list-margin"> {props.form.task1}</li>
+                            <li className="list-margin"> {props.form.task2}</li>
+                            <li className="list-margin"> {props.form.task3}</li>
                         </ul>
                     
 
