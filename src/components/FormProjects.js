@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import './FormBio.css'
 
 
 const FormProjects = props => {
-
+    function getBase64(file, e) {
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+          props.setform({...props.form, [e.target.name]:reader.result})
+        };
+        reader.onerror = function (error) {
+          console.log('Error: ', error);
+        };
+     }
 
     return (
         <>
@@ -49,6 +59,10 @@ const FormProjects = props => {
                             placeholder="add image"
                             type="file"
                             name="projectimage"
+                            onChange={e => {
+                                console.log(e.target.files)
+                                getBase64(e.target.files[0], e)
+                            }}
                         />
 
                     </div>

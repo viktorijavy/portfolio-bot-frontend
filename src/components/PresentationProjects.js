@@ -8,7 +8,7 @@ const PresentationProjects = props => {
     return (
         <>
             <div className="project-box">
-
+            <img src={props.form.projectimage} alt="" className='github-logo' />
                 <div className="project-text">
                     <h1>{props.form.projectname}</h1>
                     <p className="project-description"> {props.form.projectdescription}</p>
