@@ -18,7 +18,7 @@ const FormEducation = props => {
                         <label htmlFor="degree"> Degree/Subject </label>
                         <input
                             className="form-input"
-                            placeholder="What did you study there?"
+                            placeholder="What did you study?"
                             type="text"
                             name="degree1"
                             onChange={e => {

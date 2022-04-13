@@ -7,19 +7,26 @@
     
 }
 
+.experience-img {
+    max-width: 35rem;
+    
+}
+
+
+
 .experience-title {
-    width: 50%;
-    text-align: center;
-    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #72BBE9;
+    font-weight: 700;
+    
 }
 
 .experience-text {
-    width: 50%;
+    max-width: 35rem;
+    
+    margin-left: 5rem;
 }
-/* .company {
-    font-style: italic;
-    font-weight:300;
-} */
+
 .role {
     font-weight:700;
     font-size: 2.5rem;

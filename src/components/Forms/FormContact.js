@@ -1,23 +1,6 @@
-
-import './FormBio.css';
-
-const FormBio = props => {
-
-    function getBase64(file, e) {
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-          props.setform({...props.form, [e.target.name]:reader.result})
-        };
-        reader.onerror = function (error) {
-          console.log('Error: ', error);
-        };
-     }
-
-
+const FormContact = props => {
     return (
         <>
-
             <div className="form-container">
 
                 <form
@@ -26,15 +9,15 @@ const FormBio = props => {
                     }}
                     className="form">
 
-                    <h2> Add a short bio</h2>
+                    <h2> Contact information</h2>
 
                     <div className="form-item">
-                        <label htmlFor="name"> Your name</label>
+                        <label htmlFor="name"> Title</label>
                         <input
                             className="form-input"
-                            placeholder="Your name"
+                            placeholder="for example... 'Interested in working together?' "
                             type="text"
-                            name="name"
+                            name="contacttitle"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -43,26 +26,26 @@ const FormBio = props => {
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="name"> Picture of you</label>
+                        <label htmlFor="email"> Email</label>
                         <input
                             className="form-input"
-                            placeholder="Your name"
-                            type="file"
-                            name="picture"
+                            placeholder="Add your email address"
+                            type="text"
+                            name="email"
                             onChange={e => { 
-                                getBase64(e.target.files[0], e)
+                                props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
 
                         />
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="occupation"> Your (desired) occupation</label>
+                        <label htmlFor="github"> Github account</label>
                         <input
                             className="form-input"
-                            placeholder="Your occupation"
+                            placeholder="Share your github account"
                             type="text"
-                            name="occupation"
+                            name="github"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -71,12 +54,12 @@ const FormBio = props => {
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="city"> Your city </label>
+                        <label htmlFor="linkedin"> LinkedIn account </label>
                         <input
                             className="form-input"
-                            placeholder="City"
+                            placeholder="Share your linkedin account"
                             type="text"
-                            name="city"
+                            name="linkedin"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -84,14 +67,27 @@ const FormBio = props => {
                     </div>
 
                     <div className="form-item">
-                        <label> About </label>
+                        <label htmlFor="twitter"> Twitter account </label>
+                        <input
+                            className="form-input"
+                            placeholder="Share another account"
+                            type="text"
+                            name="twitter"
+                            onChange={e => {
+                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                            }}
+                        />
+                    </div>
+
+                    <div className="form-item">
+                        <label> Anything else you would like to add? </label>
                         <textarea
                             className="form-input"
-                            placeholder="Add something about you"
+                            placeholder="Add anything here"
                             type="text"
                             rows="7" 
-                            // cols="5"
-                            name="about"
+                            
+                            name="anything"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -99,11 +95,11 @@ const FormBio = props => {
                         />
                     </div>
 
-                    <button className="next-btn" type="submit">Next</button>
+                    <button className="next-btn" type="submit">Submit</button>
                 </form>
             </div>
         </>
-    )
+    ) 
 }
 
-export default FormBio
+export default FormContact;

@@ -8,12 +8,14 @@ import FormExperience from './Forms/FormExperience';
 import PresentationExperience from './Presentations/PresentationExperience';
 import FormEducation from './Forms/FormEducation';
 import PresentationEducation from './Presentations/PresentationEducation';
+import FormContact from './Forms/FormContact';
+import PresentationContact from './Presentations/PresentationContact';
 
 
 
 const Customizer = () => {
 
-    const [progress, setProgress] = useState(0)
+    const [progress, setProgress] = useState(4)
     const [form, setform] = useState({})
     const [userObject, setuserObject] = useState({})
 
@@ -27,17 +29,17 @@ const Customizer = () => {
         localStorage.setItem('progress', progress + 1) // set the current index to the LS, so we can later start directly in level 5
         const newUserObject = { ...userObject, ...currentPayload }  // temp object of the desconstructed new accumulated object what we put ...
         localStorage.setItem("userobject", JSON.stringify(newUserObject)) // ... the LS as a string
-        if(progress === 4){
+        if (progress === 4) {
             fetch('http://localhost:4000', {
                 method: "POST",
-            headers: {
-                'content-type': "application/json"
-            },
-            body: 
-            JSON.stringify(newUserObject)
-            
-        })
-    }
+                headers: {
+                    'content-type': "application/json"
+                },
+                body:
+                    JSON.stringify(newUserObject)
+
+            })
+        }
         setuserObject(newUserObject) // put new  big userobject in state
         console.log(userObject)
         setProgress(progress + 1)
@@ -75,13 +77,13 @@ const Customizer = () => {
                 </>)}
                 {progress === 2 && (<>
                     <PresentationExperience
-                         form={form}
-                       
+                        form={form}
+
                     />
                     <FormExperience
-                         form={form}
-                         setform={setform}
-                         increaseProgress={increaseProgress}
+                        form={form}
+                        setform={setform}
+                        increaseProgress={increaseProgress}
 
                     />
 
@@ -97,10 +99,26 @@ const Customizer = () => {
                         form={form}
                         setform={setform}
                         increaseProgress={increaseProgress}
-                      
+
                     />
 
                 </>)}
+
+                {progress === 4 && (<>
+
+                    <PresentationContact
+                        form={form}
+                    />
+
+                    <FormContact
+                        form={form}
+                        setform={setform}
+                        increaseProgress={increaseProgress}
+
+                    />
+
+                </>)}
+
 
             </div>
 

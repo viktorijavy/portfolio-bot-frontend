@@ -1,6 +1,6 @@
 import './PresentationProjects.css'
-
-import logo from '../../GitHub_Logo.png'
+import pic2 from '../../project-pic.png'
+import logo from '../../GitHub_Logo_White.png'
 
 
 const PresentationProjects = props => {
@@ -13,16 +13,25 @@ const PresentationProjects = props => {
                     <h1>{props.form.projectname}</h1>
                     <p className="project-description"> {props.form.projectdescription}</p>
                     <div className="project-technologies">
-                    Made with: 
-                    <p> {props.form.technologies }</p>
+
+                    {props.form.technologies ?  <p>  Made with: </p> : null}
+                
+                    <p className="technologies"> {props.form.technologies }</p>
                     </div>
                     <div className="project-links">
-                        <a href={props.form.code}> <img src={logo} alt="" className='github-logo' /> </a>
+                    {props.form.code ? 
+                    <a href={props.form.code}> <img src={logo} alt="" className='github-logo' /> </a> : null}
+                    {props.form.demo ?  
+                    <a href={props.form.demo} className="demo"> Demo </a> : null}    
+                       
                     </div>
 
                 </div>
                 <div className="project-image-box">
-                    <img className="project-img" src={props.form.projectimage} alt="project-img" />
+                    {props.form.projectimage ? <img className="project-img" src={props.form.projectimage} alt="project-img" />
+                    : null}
+                   
+                    
                 </div>
 
             </div>

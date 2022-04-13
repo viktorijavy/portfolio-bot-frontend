@@ -1,0 +1,37 @@
+.contact-box {
+     width: 70%;
+    
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    
+
+}
+.social-logo {
+    width: 3.5rem;
+    margin: 1rem 0.5rem;
+   
+}
+
+.contact-email {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.social-links {
+    font-size: 1.8rem;
+}
+
+.find-me-on, .social-link-items {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -2,19 +2,14 @@
     width: 70%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    
-
+    align-items: center;  
 }
 
 .project-text {
     width: 40%;
     display: flex;
     flex-direction: column;
-    margin-left: 10rem;
-    max-height: 40rem;
-    
+    margin-left: 10rem;  
 }
 
 .project-image-box {
@@ -26,19 +21,52 @@
 .project-img {
     max-width: 80%;
     border-radius: 15px;
-
 }
 
 .github-logo {
-    width: 7rem;
+    width: 9rem;
+    border-radius: 15px;
+    background-color: black;
+    padding: 0.5rem 1.5rem;
+    transition: all .2s;  
 }
 
+.github-logo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem #778da9; 
+}
 
-.technologies-list {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
+.github-logo:active {
+    transform: translate(-1px); 
+}
+
+.demo {
+    width: 9rem;
+    border-radius: 15px;
+    background-color: #f28482;
+    padding: 0.9rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    align-self: baseline;
+    margin-left: 2rem;
+    font-weight: 700;
+    text-align: center;
+    transition: all .2s;
+}
+
+.demo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem #f28482; 
+}
+
+.demo:active {
+    transform: translate(-1px); 
+}
+
+.technologies {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
 }
 .technologie-list-item {
     margin-right: 1rem;
@@ -49,5 +77,9 @@
 }
 
 .project-links {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
 }

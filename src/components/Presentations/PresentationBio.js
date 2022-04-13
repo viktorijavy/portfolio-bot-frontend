@@ -1,5 +1,5 @@
 import './PresentationBio.css'
-import vicpic from '../../avatar.png'
+import substitutepic from '../../avatar.png'
 
 const PresentationBio = props => {
 
@@ -8,18 +8,23 @@ const PresentationBio = props => {
             <div className="presentation">
 
                 <div className="intro">
-
-                    <h1 className="presentation-title"> Hi, my name is {props.form.name}</h1>
-                    <p className="presentation-line"> I am a {props.form.occupation}</p>
-                    <p className="presentation-line"> based in {props.form.city}, Germany</p>
+                    {props.form.name ? <h1 className="presentation-title"> Hi, my name is {props.form.name}</h1> : null}
+                    
+                    {props.form.occupation ? <p className="presentation-line"> I am a {props.form.occupation}</p> : null}
+                    {props.form.city ? <p className="presentation-line"> based in {props.form.city}</p> : null}
+                    
                     <p className="paragraph"> {props.form.about}</p>
-
-                    <button className="see-projects-btn"> See my projects </button>
+                    
+                    { props.form.about ? <button className="see-projects-btn"> See my projects </button> : null}
+                    {/* <button className="see-projects-btn"> See my projects </button> */}
                     
                 </div>
 
                 <div className="picture">
-                    <img src={props.form.picture} className="avatar" alt="avatar" />
+                   {props.form.picture ? 
+                   <img src={props.form.picture} className="avatar" alt="avatar" /> 
+                   : null }
+                    
                 </div>
 
                
@@ -28,4 +33,4 @@ const PresentationBio = props => {
     )
 }
 
-export default PresentationBio
+export default PresentationBio;

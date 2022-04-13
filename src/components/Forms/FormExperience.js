@@ -105,6 +105,19 @@ const FormExperience = props => {
                         />
                     </div>
 
+                    <div className="form-item">
+
+                        <input
+                            className="form-input"
+                            placeholder="Task 4"
+                            type="text"
+                            name="task4"
+                            onChange={e => {
+                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                            }}
+                        />
+                    </div>
+
                     <button className="next-btn" type="submit">Next</button>
                 </form>
             </div>

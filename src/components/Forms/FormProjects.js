@@ -1,4 +1,4 @@
-import { useState } from 'react';
+
 import './FormBio.css'
 
 
@@ -24,6 +24,8 @@ const FormProjects = props => {
                     onSubmit={(e) => {
                     props.increaseProgress(e)
                 }}>
+
+                <h2> Add the best project of yours</h2>
 
                     <div className="form-item">
                         <label htmlFor="name">Project Name</label>
@@ -60,7 +62,7 @@ const FormProjects = props => {
                             type="file"
                             name="projectimage"
                             onChange={e => {
-                                // console.log(e.target.files)
+                                
                                 getBase64(e.target.files[0], e)
                             }}
                         />
