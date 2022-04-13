@@ -31,9 +31,9 @@ const PresentationContact = props => {
                         {props.form.linkedin && <a href={props.form.linkedin}><img src={linkedin} alt="" className="linkedin social-logo" /> </a>}
 
                         {props.form.github && <a href={props.form.github}><img src={github} alt="" className="github social-logo" /> </a>}
-                        
-                        {props.form.twitter && <a href={props.form.twitter}><img src={twitter} alt="" className="twitter social-logo" /> </a> }
-                        
+
+                        {props.form.twitter && <a href={props.form.twitter}><img src={twitter} alt="" className="twitter social-logo" /> </a>}
+
                     </div>
                 </div>
 

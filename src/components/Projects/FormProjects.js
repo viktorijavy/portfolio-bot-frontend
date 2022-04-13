@@ -7,25 +7,25 @@ const FormProjects = props => {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
-          props.setform({...props.form, [e.target.name]:reader.result})
+            props.setform({ ...props.form, [e.target.name]: reader.result })
         };
         reader.onerror = function (error) {
-          console.log('Error: ', error);
+            console.log('Error: ', error);
         };
-     }
+    }
 
     return (
         <>
 
             <div className="form-container">
 
-                <form 
+                <form
                     className="form"
                     onSubmit={(e) => {
-                    props.increaseProgress(e)
-                }}>
+                        props.increaseProgress(e)
+                    }}>
 
-                <h2> Add the best project of yours</h2>
+                    <h2> Add the best project of yours</h2>
 
                     <div className="form-item">
                         <label htmlFor="name">Project Name</label>
@@ -34,9 +34,9 @@ const FormProjects = props => {
                             placeholder="Project Name"
                             type="text"
                             name="projectname"
-                            onChange={e=>{
-                                props.setform({...props.form, [e.target.name]: e.target.value})
-                                }}
+                            onChange={e => {
+                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                            }}
                         />
                     </div>
 
@@ -47,9 +47,9 @@ const FormProjects = props => {
                             placeholder="Describe your project shortly"
                             type="text"
                             name="projectdescription"
-                            onChange={e=>{
-                                props.setform({...props.form, [e.target.name]: e.target.value})
-                                }}
+                            onChange={e => {
+                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                            }}
 
                         />
                     </div>
@@ -62,7 +62,7 @@ const FormProjects = props => {
                             type="file"
                             name="projectimage"
                             onChange={e => {
-                                
+
                                 getBase64(e.target.files[0], e)
                             }}
                         />
@@ -76,9 +76,9 @@ const FormProjects = props => {
                             placeholder="Which technologies did you use?"
                             type="text"
                             name="technologies"
-                            onChange={e=>{
-                                props.setform({...props.form, [e.target.name]: e.target.value})
-                                }}
+                            onChange={e => {
+                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                            }}
                         />
                     </div>
 
@@ -89,9 +89,9 @@ const FormProjects = props => {
                             placeholder="Add a link to a github repo"
                             type="text"
                             name="code"
-                            onChange={e=>{
-                                props.setform({...props.form, [e.target.name]: e.target.value})
-                                }}
+                            onChange={e => {
+                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                            }}
                         />
                     </div>
 
@@ -102,9 +102,9 @@ const FormProjects = props => {
                             placeholder="Add a link to a demo"
                             type="text"
                             name="demo"
-                            onChange={e=>{
-                                props.setform({...props.form, [e.target.name]: e.target.value})
-                                }}
+                            onChange={e => {
+                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                            }}
                         />
                     </div>
 

@@ -1,21 +1,21 @@
 import './Customizer.css'
-import FormBio from './Forms/FormBio'
-import PresentationBio from './Presentations/PresentationBio'
+import FormBio from './Bio/FormBio'
+import PresentationBio from './Bio/PresentationBio'
 import { useState } from 'react';
-import FormProjects from './Forms/FormProjects';
-import PresentationProjects from './Presentations/PresentationProjects';
-import FormExperience from './Forms/FormExperience';
-import PresentationExperience from './Presentations/PresentationExperience';
-import FormEducation from './Forms/FormEducation';
-import PresentationEducation from './Presentations/PresentationEducation';
-import FormContact from './Forms/FormContact';
-import PresentationContact from './Presentations/PresentationContact';
+import FormProjects from './Projects/FormProjects';
+import PresentationProjects from './Projects/PresentationProjects';
+import FormExperience from './Experience/FormExperience';
+import PresentationExperience from './Experience/PresentationExperience';
+import FormEducation from './Education/FormEducation';
+import PresentationEducation from './Education/PresentationEducation';
+import FormContact from './Contacts/FormContact';
+import PresentationContact from './Contacts/PresentationContact';
 
 
 
 const Customizer = () => {
 
-    const [progress, setProgress] = useState(4)
+    const [progress, setProgress] = useState(0)
     const [form, setform] = useState({})
     const [userObject, setuserObject] = useState({})
 

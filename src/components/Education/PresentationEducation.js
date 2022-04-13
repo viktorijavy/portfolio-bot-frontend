@@ -21,8 +21,8 @@ const PresentationEducation = props => {
                 </div>
 
                 <div className="education-box-item">
-                    
-                <div className="education-image-div">
+
+                    <div className="education-image-div">
                         <img className="education-image" src={educationimage} alt="" />
                     </div>
                     <div className="education-text marg">
@@ -31,7 +31,7 @@ const PresentationEducation = props => {
                         <p className="date"> {props.form.edstartdate2} - {props.form.edenddate2}</p>
                     </div>
 
-                  
+
                 </div>
             </div>
         </>
