@@ -1,20 +1,9 @@
 
-import './FormBio.css';
+import './FormHeader.css';
 
-const FormBio = props => {
+const FormHeader = props => {
 
-    function getBase64(file, e) {
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-          props.setform({...props.form, [e.target.name]:reader.result})
-        };
-        reader.onerror = function (error) {
-          console.log('Error: ', error);
-        };
-     }
-
-
+ 
     return (
         <>
 
@@ -26,7 +15,7 @@ const FormBio = props => {
                     }}
                     className="form">
 
-                    <h2> Add a short bio</h2>
+                    <h2> Design your header </h2>
 
                     <div className="form-item">
                         <label htmlFor="name"> Your name</label>
@@ -42,19 +31,6 @@ const FormBio = props => {
                         />
                     </div>
 
-                    <div className="form-item">
-                        <label htmlFor="name"> Picture of you</label>
-                        <input
-                            className="form-input"
-                            placeholder="Your name"
-                            type="file"
-                            name="picture"
-                            onChange={e => { 
-                                getBase64(e.target.files[0], e)
-                            }}
-
-                        />
-                    </div>
 
                     <div className="form-item">
                         <label htmlFor="occupation"> Your (desired) occupation</label>
@@ -106,4 +82,4 @@ const FormBio = props => {
     )
 }
 
-export default FormBio
+export default FormHeader;

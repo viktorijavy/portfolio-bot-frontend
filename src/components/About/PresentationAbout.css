@@ -1,0 +1,51 @@
+.about-box {
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.about-text {
+   margin-right: 10rem;
+   position:relative;
+ 
+   
+}
+
+ .kabute-last {
+    position: absolute;
+    bottom: -2rem;
+    right: -1rem;
+}
+.about-title {
+    position: absolute;
+    top: -7rem;
+    
+}
+
+.dots {
+    width: 20rem;
+    
+}
+
+/* .kabute-first {
+    position:absolute;
+    top: -3rem;
+   
+}  */
+
+.kabute {
+    width: 4rem;
+}
+
+.main-image {
+    width: 30rem;
+    border-radius: 15px;
+}
+.about-paragraph {
+    width: 30rem;
+    text-align:justify;
+    
+}

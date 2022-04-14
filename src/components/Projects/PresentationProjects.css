@@ -1,8 +1,10 @@
 .project-box {
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;  
+    background-color: black;
+    color: white;
 }
 
 .project-text {
@@ -27,8 +29,9 @@
     width: 9rem;
     border-radius: 15px;
     background-color: black;
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     transition: all .2s;  
+    border: 1px solid white;
 }
 
 .github-logo:hover {
@@ -43,7 +46,7 @@
 .demo {
     width: 9rem;
     border-radius: 15px;
-    background-color: #f28482;
+    background-color: #6CC6E1;;
     padding: 0.9rem 1.5rem;
     color: white;
     text-decoration: none;
@@ -52,11 +55,12 @@
     font-weight: 700;
     text-align: center;
     transition: all .2s;
+    border: 1px solid white;
 }
 
 .demo:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0.5rem 1rem #f28482; 
+    box-shadow: 0 0.5rem 1rem #6CC6E1;; 
 }
 
 .demo:active {

@@ -1,6 +1,6 @@
 import './Customizer.css'
-import FormBio from './Bio/FormBio'
-import PresentationBio from './Bio/PresentationBio'
+import FormHeader from './Header/FormHeader'
+import PresentationHeader from './Header/PresentationHeader'
 import { useState } from 'react';
 import FormProjects from './Projects/FormProjects';
 import PresentationProjects from './Projects/PresentationProjects';
@@ -10,6 +10,8 @@ import FormEducation from './Education/FormEducation';
 import PresentationEducation from './Education/PresentationEducation';
 import FormContact from './Contacts/FormContact';
 import PresentationContact from './Contacts/PresentationContact';
+import PresentationAbout from './About/PresentationAbout';
+import FormAbout from './About/FormAbout';
 
 
 
@@ -53,11 +55,11 @@ const Customizer = () => {
 
             <div className="customizer-container">
                 {progress === 0 && (<>
-                    <PresentationBio
+                    <PresentationHeader
                         form={form}
                     />
 
-                    <FormBio
+                    <FormHeader
                         form={form}
                         setform={setform}
                         increaseProgress={increaseProgress}
@@ -65,6 +67,18 @@ const Customizer = () => {
                 </>)}
 
                 {progress === 1 && (<>
+                    <PresentationAbout
+                        form={form}
+                    />
+
+                    <FormAbout
+                        form={form}
+                        setform={setform}
+                        increaseProgress={increaseProgress}
+                    />
+                </>)}
+
+                {progress === 2 && (<>
                     <PresentationProjects
                         form={form}
                     />
@@ -75,7 +89,7 @@ const Customizer = () => {
 
                     />
                 </>)}
-                {progress === 2 && (<>
+                {progress === 3 && (<>
                     <PresentationExperience
                         form={form}
 
@@ -89,7 +103,7 @@ const Customizer = () => {
 
                 </>)}
 
-                {progress === 3 && (<>
+                {progress === 4 && (<>
 
                     <PresentationEducation
                         form={form}
@@ -104,7 +118,7 @@ const Customizer = () => {
 
                 </>)}
 
-                {progress === 4 && (<>
+                {progress === 5 && (<>
 
                     <PresentationContact
                         form={form}

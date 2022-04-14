@@ -4,11 +4,13 @@
 
 .education-box {
     
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color: white;
     
 
 }

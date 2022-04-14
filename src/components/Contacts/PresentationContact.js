@@ -2,6 +2,7 @@ import './PresentationContact.css'
 import linkedin from '../../images/linkedin.png'
 import github from '../../images/github.png'
 import twitter from '../../images/twitter.png'
+import contact from '../../images/contact-me-guy.png'
 
 const PresentationContact = props => {
 
@@ -35,6 +36,11 @@ const PresentationContact = props => {
                         {props.form.twitter && <a href={props.form.twitter}><img src={twitter} alt="" className="twitter social-logo" /> </a>}
 
                     </div>
+                </div>
+
+                <div className="contact-image-holder">
+
+                    <img src={contact} alt="" className="contact-img"/>
                 </div>
 
             </div>

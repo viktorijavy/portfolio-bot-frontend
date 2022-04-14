@@ -1,22 +1,29 @@
 .contact-box {
-     width: 70%;
-    
+     width: 80%;
+     position: relative;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
+     background-color: black;
+     color: white;
 }
 
 .contact-title {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    
-
 }
 .social-logo {
     width: 3.5rem;
     margin: 1rem 0.5rem;
    
+}
+
+.social-link-items {
+    background-color: white;
+    border-radius: 15px;
+    margin-top:2rem;
+    padding: 0.5rem;
 }
 
 .contact-email {
@@ -34,4 +41,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.contact-img {
+    width: 15rem;
+    position: absolute;
+    bottom: 10rem;
+    left: 10rem;
 }
