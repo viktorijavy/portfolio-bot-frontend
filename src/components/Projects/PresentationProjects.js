@@ -1,6 +1,6 @@
 import './PresentationProjects.css'
 // import pic2 from '../../project-pic.png'
-import logo from '../../GitHub_Logo_White.png'
+import logo from '../../images/GitHub_Logo_White.png'
 
 
 const PresentationProjects = props => {

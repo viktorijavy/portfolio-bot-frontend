@@ -1,7 +1,7 @@
 import './HomePage.css'
 import Navbar from '../components/Navbar'
-import pic from '../programmer-1.png'
-import pic2 from '../programmer-2.png'
+import pic from '../images/programmer-1.png'
+import pic2 from '../images/programmer-2.png'
 import { Link } from 'react-router-dom'
 
 const HomePage = () => {

@@ -1,5 +1,5 @@
 import './PresentationEducation.css'
-import educationimage from '../../education.png'
+import educationimage from '../../images/education.png'
 
 const PresentationEducation = props => {
 

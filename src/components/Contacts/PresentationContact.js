@@ -1,7 +1,7 @@
 import './PresentationContact.css'
-import linkedin from '../../linkedin.png'
-import github from '../../github.png'
-import twitter from '../../twitter.png'
+import linkedin from '../../images/linkedin.png'
+import github from '../../images/github.png'
+import twitter from '../../images/twitter.png'
 
 const PresentationContact = props => {
 

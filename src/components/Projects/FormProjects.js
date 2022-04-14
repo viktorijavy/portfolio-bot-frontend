@@ -1,5 +1,5 @@
 
-import './FormBio.css'
+import '../Bio/FormBio.css'
 
 
 const FormProjects = props => {

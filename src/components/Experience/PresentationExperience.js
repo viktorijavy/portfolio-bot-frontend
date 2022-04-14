@@ -1,5 +1,5 @@
 import './PresentationExperience.css'
-import experienceimg from '../../experience.png'
+import experienceimg from '../../images/experience.png'
 
 const PresentationExperience = props => {
 

@@ -1,5 +1,5 @@
 import './PresentationBio.css'
-// import substitutepic from '../../avatar.png'
+import substitutepic from '../../images/avatar.png'
 
 const PresentationBio = props => {
 
@@ -20,7 +20,9 @@ const PresentationBio = props => {
                 </div>
 
                 <div className="picture">
-                    {props.form.picture && <img src={props.form.picture} className="avatar" alt="avatar" />}
+                    {props.form.picture ? <img src={props.form.picture} className="avatar" alt="avatar" /> : 
+                    <img src={substitutepic} alt="" className="avatar"/>}
+                    
 
                 </div>
 
