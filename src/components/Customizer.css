@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #778da9;
+  /* background-color: #778da9; */
+  background-color: white;
   height: 100vh;
 }
 

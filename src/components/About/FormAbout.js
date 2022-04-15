@@ -47,7 +47,7 @@ const FormAbout = props => {
                             placeholder="Add something about you"
                             type="text"
                             rows="7" 
-                            // cols="5"
+                            maxlength="750"
                             name="description"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })

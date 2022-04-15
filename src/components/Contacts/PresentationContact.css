@@ -5,7 +5,7 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     background-color: black;
+     background-color: #6CC6E1;
      color: white;
 }
 
@@ -17,13 +17,6 @@
     width: 3.5rem;
     margin: 1rem 0.5rem;
    
-}
-
-.social-link-items {
-    background-color: white;
-    border-radius: 15px;
-    margin-top:2rem;
-    padding: 0.5rem;
 }
 
 .contact-email {

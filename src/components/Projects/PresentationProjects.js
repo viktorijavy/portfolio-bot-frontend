@@ -8,8 +8,10 @@ const PresentationProjects = props => {
     return (
         <>
             <div className="project-box">
+            
 
                 <div className="project-text">
+                <h1 className="projects-title"> Projects.</h1>
                     <h1>{props.form.projectname}</h1>
                     <p className="project-description"> {props.form.projectdescription}</p>
                     <div className="project-technologies">

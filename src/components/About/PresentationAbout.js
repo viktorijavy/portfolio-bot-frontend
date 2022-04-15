@@ -14,7 +14,7 @@ const PresentationAbout = props => {
             
               <p className="about-paragraph"> {props.form.description}</p>
               {props.form.description &&  <img src={kabute} alt="" className="kabute kabute-last"/>}
-             {/* <img src={kabute} alt="" className="kabute kabute-last"/> */}
+            
           </div>
 
           <div className="about-image-box">
@@ -22,7 +22,7 @@ const PresentationAbout = props => {
           </div>
       </div>
 
-      {/* <img src={bluedots} alt="" className="dots" /> */}
+     
         </>
     )
 }

@@ -39,6 +39,8 @@ const FormHeader = props => {
                             placeholder="Your occupation"
                             type="text"
                             name="occupation"
+                            minlength="10"
+                            maxlength="50"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -53,6 +55,7 @@ const FormHeader = props => {
                             placeholder="City"
                             type="text"
                             name="city"
+                            maxlength="25"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -66,7 +69,7 @@ const FormHeader = props => {
                             placeholder="Add something about you"
                             type="text"
                             rows="7" 
-                            // cols="5"
+                            maxlength="500"
                             name="about"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })

@@ -5,6 +5,7 @@
     justify-content: center;
     background-color: black;
     color: white;
+    border-radius: 15px 0 0 15px;
 }
 
 .about-text {
@@ -22,6 +23,7 @@
 .about-title {
     position: absolute;
     top: -7rem;
+    color: #6CC6E1;
     
 }
 
@@ -30,11 +32,6 @@
     
 }
 
-/* .kabute-first {
-    position:absolute;
-    top: -3rem;
-   
-}  */
 
 .kabute {
     width: 4rem;

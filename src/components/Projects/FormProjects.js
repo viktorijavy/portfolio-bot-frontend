@@ -46,6 +46,7 @@ const FormProjects = props => {
                             className="form-input"
                             placeholder="Describe your project shortly"
                             type="text"
+                            rows='5'
                             name="projectdescription"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
@@ -83,7 +84,7 @@ const FormProjects = props => {
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="demo"> Github </label>
+                        <label htmlFor="code"> Github </label>
                         <input
                             className="form-input"
                             placeholder="Add a link to a github repo"
@@ -96,7 +97,7 @@ const FormProjects = props => {
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="code-link"> Code </label>
+                        <label htmlFor="demo"> Demo </label>
                         <input
                             className="form-input"
                             placeholder="Add a link to a demo"

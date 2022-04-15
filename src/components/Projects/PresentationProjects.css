@@ -3,8 +3,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;  
-    background-color: black;
+    background-color: #1D1D1D;
     color: white;
+    border-radius: 15px 0 0 15px;
 }
 
 .project-text {
@@ -12,6 +13,13 @@
     display: flex;
     flex-direction: column;
     margin-left: 10rem;  
+    position: relative;
+}
+
+.projects-title {
+    position: absolute;
+    top: -7rem;
+    color: #6CC6E1;
 }
 
 .project-image-box {
