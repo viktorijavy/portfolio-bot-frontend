@@ -31,7 +31,7 @@ const Customizer = () => {
         localStorage.setItem('progress', progress + 1) // set the current index to the LS, so we can later start directly in level 5
         const newUserObject = { ...userObject, ...currentPayload }  // temp object of the desconstructed new accumulated object what we put ...
         localStorage.setItem("userobject", JSON.stringify(newUserObject)) // ... the LS as a string
-        if (progress === 4) {
+        if (progress === 5) {
             fetch('http://localhost:4000', {
                 method: "POST",
                 headers: {

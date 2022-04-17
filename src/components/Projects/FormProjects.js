@@ -1,6 +1,4 @@
-
-import '../Header/FormHeader.css'
-
+import Button from "../Button";
 
 const FormProjects = props => {
     function getBase64(file, e) {
@@ -111,7 +109,7 @@ const FormProjects = props => {
 
 
 
-                    <button className="next-btn" type="submit"> Add Project</button>
+                    <Button type="submit"> Add Project</Button>
                 </form>
             </div>
         </>

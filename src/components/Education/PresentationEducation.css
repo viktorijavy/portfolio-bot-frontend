@@ -12,6 +12,8 @@
     background-color: #1D1D1D;
     color: white;
     border-radius: 15px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 15px 0 0 15px;
     
 
 }
@@ -28,5 +30,5 @@
 .education-text {
     margin-left: 3rem;
     margin-top: 3rem;
-    width: 25rem;
+    width: 40rem;
 }

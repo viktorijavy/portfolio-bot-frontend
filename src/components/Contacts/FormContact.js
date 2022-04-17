@@ -1,3 +1,6 @@
+import Button from "../Button";
+
+
 const FormContact = props => {
     return (
         <>
@@ -95,7 +98,7 @@ const FormContact = props => {
                         />
                     </div>
 
-                    <button className="next-btn" type="submit">Submit</button>
+                   <Button type="submit"> Submit </Button>
                 </form>
             </div>
         </>

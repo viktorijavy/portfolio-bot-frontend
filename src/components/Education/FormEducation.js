@@ -1,3 +1,4 @@
+import Button from "../Button";
 
 const FormEducation = props => {
 
@@ -76,7 +77,7 @@ const FormEducation = props => {
                             placeholder="What skills did you learn there"
                             type="text"
                             rows="3" 
-                            maxlength="200"
+                            maxlength="130"
                             name="eddescription1"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
@@ -148,7 +149,7 @@ const FormEducation = props => {
                             placeholder="What skills did you learn there"
                             type="text"
                             rows="3" 
-                            maxlength="200"
+                            maxlength="130"
                             name="eddescription2"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
@@ -157,7 +158,7 @@ const FormEducation = props => {
                         />
                     </div>
 
-                    <button className="next-btn" type="submit">Next</button>
+                   <Button type="submit"> Next </Button>
                 </form>
             </div>
         </>

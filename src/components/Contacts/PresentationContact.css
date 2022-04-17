@@ -5,8 +5,10 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     background-color: #6CC6E1;
-     color: white;
+     background-color: white;
+     color: black;
+     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+     border-radius: 15px 0 0 15px;;
 }
 
 .contact-title {

@@ -1,3 +1,5 @@
+import Button from "../Button";
+
 const FormExperience = props => {
 
 
@@ -117,8 +119,8 @@ const FormExperience = props => {
                             }}
                         />
                     </div>
-
-                    <button className="next-btn" type="submit">Next</button>
+                    <Button type="submit"> Next</Button>
+                    
                 </form>
             </div>
         </>

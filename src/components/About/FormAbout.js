@@ -1,3 +1,5 @@
+import Button from "../Button";
+
 
 const FormAbout = props => {
 
@@ -5,12 +7,12 @@ const FormAbout = props => {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
-          props.setform({...props.form, [e.target.name]:reader.result})
+            props.setform({ ...props.form, [e.target.name]: reader.result })
         };
         reader.onerror = function (error) {
-          console.log('Error: ', error);
+            console.log('Error: ', error);
         };
-     }
+    }
 
     return (
         <>
@@ -32,21 +34,21 @@ const FormAbout = props => {
                             placeholder="Your name"
                             type="file"
                             name="picture"
-                            onChange={e => { 
+                            onChange={e => {
                                 getBase64(e.target.files[0], e)
                             }}
 
                         />
                     </div>
 
-                  
+
                     <div className="form-item">
                         <label> About </label>
                         <textarea
                             className="form-input"
                             placeholder="Add something about you"
                             type="text"
-                            rows="7" 
+                            rows="7"
                             maxlength="750"
                             name="description"
                             onChange={e => {
@@ -55,8 +57,8 @@ const FormAbout = props => {
 
                         />
                     </div>
+                    <Button type="submit">Next</Button>
 
-                    <button className="next-btn" type="submit">Next</button>
                 </form>
             </div>
         </>

@@ -1,5 +1,5 @@
-
 import './FormHeader.css';
+import Button from '../Button';
 
 const FormHeader = props => {
 
@@ -66,7 +66,7 @@ const FormHeader = props => {
                         <label> About </label>
                         <textarea
                             className="form-input"
-                            placeholder="Add something about you"
+                            placeholder="Add something short about you"
                             type="text"
                             rows="7" 
                             maxlength="500"
@@ -77,8 +77,8 @@ const FormHeader = props => {
 
                         />
                     </div>
-
-                    <button className="next-btn" type="submit">Next</button>
+                    <Button type="submit">Next</Button>
+                    
                 </form>
             </div>
         </>
