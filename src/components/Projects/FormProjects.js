@@ -32,6 +32,7 @@ const FormProjects = props => {
                             placeholder="Project Name"
                             type="text"
                             name="projectname"
+                            value={props.form.projectname}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -46,6 +47,7 @@ const FormProjects = props => {
                             type="text"
                             rows='5'
                             name="projectdescription"
+                            value={props.form.projectdescription}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -60,6 +62,7 @@ const FormProjects = props => {
                             placeholder="add image"
                             type="file"
                             name="projectimage"
+                            value={props.form.projectimage}
                             onChange={e => {
 
                                 getBase64(e.target.files[0], e)
@@ -75,6 +78,7 @@ const FormProjects = props => {
                             placeholder="Which technologies did you use?"
                             type="text"
                             name="technologies"
+                            value={props.form.technologies}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -88,6 +92,7 @@ const FormProjects = props => {
                             placeholder="Add a link to a github repo"
                             type="text"
                             name="code"
+                            value={props.form.code}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -101,6 +106,7 @@ const FormProjects = props => {
                             placeholder="Add a link to a demo"
                             type="text"
                             name="demo"
+                            value={props.form.demo}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}

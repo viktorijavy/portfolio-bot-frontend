@@ -34,28 +34,21 @@ const Customizer = () => {
         e.preventDefault()
         let currentPayload = {}  //create empty object for accumulation of new form data
         Array.from(e.target.elements).map(i => currentPayload[i.name] = i.value)  // get new form entries from form and put it int that object {name: "heyr", age: 15 ...}
-        console.log(currentPayload);
         localStorage.setItem('progress', progress + 1) // set the current index to the LS, so we can later start directly in level 5
         const newUserObject = { ...userObject, ...currentPayload }  // temp object of the desconstructed new accumulated object what we put ...
         localStorage.setItem("userobject", JSON.stringify(newUserObject)) // ... the LS as a string
         if (progress === 5) {
-            fetch('http://localhost:4000', {
+            fetch('http://localhost:4000/generate', {
                 method: "POST",
                 headers: {
                     'content-type': "application/json"
                 },
-                body:
-                    JSON.stringify(newUserObject)
-
+                body: JSON.stringify(newUserObject)
             })
         }
         setuserObject(newUserObject) // put new  big userobject in state
-        console.log(userObject)
         setProgress(progress + 1)
     }
-
-    console.log(userObject);
-
 
     return (
         <div className="main-container-flex">

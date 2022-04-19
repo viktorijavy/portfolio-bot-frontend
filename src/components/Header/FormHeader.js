@@ -32,7 +32,6 @@ const FormHeader = props => {
                         />
                     </div>
 
-
                     <div className="form-item">
                         <label htmlFor="occupation"> Your (desired) occupation</label>
                         <input
@@ -46,7 +45,6 @@ const FormHeader = props => {
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
-
                         />
                     </div>
 
@@ -57,6 +55,7 @@ const FormHeader = props => {
                             placeholder="City"
                             type="text"
                             name="city"
+                            value={props.form.city}
                             maxlength="25"
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
@@ -73,6 +72,7 @@ const FormHeader = props => {
                             rows="7" 
                             maxlength="500"
                             name="about"
+                            value={props.form.about}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}

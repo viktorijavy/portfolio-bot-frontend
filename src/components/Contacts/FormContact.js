@@ -21,6 +21,7 @@ const FormContact = props => {
                             placeholder="for example... 'Interested in working together?' "
                             type="text"
                             name="contacttitle"
+                            value={props.form.contacttitle}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -35,6 +36,7 @@ const FormContact = props => {
                             placeholder="Add your email address"
                             type="text"
                             name="email"
+                            value={props.form.email}
                             onChange={e => { 
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -49,6 +51,7 @@ const FormContact = props => {
                             placeholder="Share your github account"
                             type="text"
                             name="github"
+                            value={props.form.github}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -63,6 +66,7 @@ const FormContact = props => {
                             placeholder="Share your linkedin account"
                             type="text"
                             name="linkedin"
+                            value={props.form.linkedin}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -76,6 +80,7 @@ const FormContact = props => {
                             placeholder="Share another account"
                             type="text"
                             name="twitter"
+                            value={props.form.twitter}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
@@ -91,6 +96,7 @@ const FormContact = props => {
                             rows="7" 
                             
                             name="anything"
+                            value={props.form.anything}
                             onChange={e => {
                                 props.setform({ ...props.form, [e.target.name]: e.target.value })
                             }}
