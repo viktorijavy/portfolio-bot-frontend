@@ -23,7 +23,7 @@ const FormContact = props => {
                             name="contacttitle"
                             value={props.form.contacttitle}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />
@@ -38,7 +38,7 @@ const FormContact = props => {
                             name="email"
                             value={props.form.email}
                             onChange={e => { 
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />
@@ -53,7 +53,7 @@ const FormContact = props => {
                             name="github"
                             value={props.form.github}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />
@@ -68,7 +68,7 @@ const FormContact = props => {
                             name="linkedin"
                             value={props.form.linkedin}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -82,7 +82,7 @@ const FormContact = props => {
                             name="twitter"
                             value={props.form.twitter}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -98,7 +98,7 @@ const FormContact = props => {
                             name="anything"
                             value={props.form.anything}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />

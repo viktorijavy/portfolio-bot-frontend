@@ -34,7 +34,7 @@ const FormProjects = props => {
                             name="projectname"
                             value={props.form.projectname}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -49,7 +49,7 @@ const FormProjects = props => {
                             name="projectdescription"
                             value={props.form.projectdescription}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />
@@ -80,7 +80,7 @@ const FormProjects = props => {
                             name="technologies"
                             value={props.form.technologies}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -94,7 +94,7 @@ const FormProjects = props => {
                             name="code"
                             value={props.form.code}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -108,7 +108,7 @@ const FormProjects = props => {
                             name="demo"
                             value={props.form.demo}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>

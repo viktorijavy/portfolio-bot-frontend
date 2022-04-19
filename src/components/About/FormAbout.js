@@ -52,7 +52,7 @@ const FormAbout = props => {
                             maxlength="750"
                             name="description"
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />

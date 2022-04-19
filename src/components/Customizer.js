@@ -26,6 +26,7 @@ const Customizer = () => {
     }
     const [progress, setProgress] = useState(0)
     const [form, setform] = useState(initialForm)
+    const [errors, seterrors] = useState({})
     const [userObject, setuserObject] = useState({})
 
 
@@ -49,10 +50,25 @@ const Customizer = () => {
         setuserObject(newUserObject) // put new  big userobject in state
         setProgress(progress + 1)
     }
+    const validateAndSetForm = e => { //This runs on ALL onchange handlers. You get the event where the target and the name
+        if (e.target.name === 'occupation') {
+            if (e.target.value.length < 4) {
+                e.target.style.border = "1px solid red"
+                seterrors({ ...errors, occupation: "The occupation should be longer than 2 letters" })
+            } else {
+                e.target.style.border = "0 none"
+                const errrorClone = {...errors} //pure programming => never touch the original object
+                delete errrorClone.occupation
+                seterrors(errrorClone)
+            }
+        }
+
+        setform({ ...form, [e.target.name]: e.target.value })
+    }
 
     return (
         <div className="main-container-flex">
-
+            
             <div className="customizer-container">
                 {progress === 0 && (<>
                     <PresentationHeader
@@ -61,7 +77,8 @@ const Customizer = () => {
 
                     <FormHeader
                         form={form}
-                        setform={setform}
+                        errors={errors}
+                        validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
                     />
                 </>)}
@@ -73,7 +90,7 @@ const Customizer = () => {
 
                     <FormAbout
                         form={form}
-                        setform={setform}
+                        validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
                     />
                 </>)}
@@ -84,7 +101,7 @@ const Customizer = () => {
                     />
                     <FormProjects
                         form={form}
-                        setform={setform}
+                        validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
 
                     />
@@ -96,7 +113,7 @@ const Customizer = () => {
                     />
                     <FormExperience
                         form={form}
-                        setform={setform}
+                        validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
 
                     />
@@ -111,7 +128,7 @@ const Customizer = () => {
 
                     <FormEducation
                         form={form}
-                        setform={setform}
+                        validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
 
                     />
@@ -126,7 +143,7 @@ const Customizer = () => {
 
                     <FormContact
                         form={form}
-                        setform={setform}
+                        validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
 
                     />

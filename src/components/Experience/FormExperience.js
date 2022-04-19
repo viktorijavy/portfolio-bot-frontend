@@ -24,7 +24,7 @@ const FormExperience = props => {
                             name="role"
                             value={props.form.role}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -38,7 +38,7 @@ const FormExperience = props => {
                             name="company"
                             value={props.form.company}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -52,7 +52,7 @@ const FormExperience = props => {
                             name="startdate"
                             value={props.form.startdate}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -66,7 +66,7 @@ const FormExperience = props => {
                             name="enddate"
                             value={props.form.enddate}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -81,7 +81,7 @@ const FormExperience = props => {
                             name="task1"
                             value={props.form.task1}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -95,7 +95,7 @@ const FormExperience = props => {
                             name="task2"
                             value={props.form.task2}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -109,7 +109,7 @@ const FormExperience = props => {
                             name="task3"
                             value={props.form.task3}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -123,7 +123,7 @@ const FormExperience = props => {
                             name="task4"
                             value={props.form.task4}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>

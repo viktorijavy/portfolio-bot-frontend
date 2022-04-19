@@ -17,3 +17,8 @@
 .next-btn:active {
     transform: translateY(0px); 
 }
+
+.next-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

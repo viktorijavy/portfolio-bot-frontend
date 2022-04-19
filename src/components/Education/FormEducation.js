@@ -24,7 +24,7 @@ const FormEducation = props => {
                             name="degree1"
                             value={props.form.degree1}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -39,7 +39,7 @@ const FormEducation = props => {
                             value={props.form.institution1}
 
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -55,7 +55,7 @@ const FormEducation = props => {
                                 name="edstartdate1"
                                 value={props.form.edstartdate1}
                                 onChange={e => {
-                                    props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                    props.validateAndSetForm(e)
                                 }} />
                         </div>
 
@@ -68,7 +68,7 @@ const FormEducation = props => {
                                 name="edenddate1"
                                 value={props.form.edenddate1}
                                 onChange={e => {
-                                    props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                    props.validateAndSetForm(e)
                                 }}
                             />
                         </div>
@@ -85,7 +85,7 @@ const FormEducation = props => {
                             name="eddescription1"
                             value={props.form.eddescription1}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />
@@ -100,7 +100,7 @@ const FormEducation = props => {
                             name="degree2"
                             value={props.form.degree2}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -114,7 +114,7 @@ const FormEducation = props => {
                             name="institution2"
                             value={props.form.institution2}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -130,7 +130,7 @@ const FormEducation = props => {
                             name="edstartdate2"
                             value={props.form.edstartdate2}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -144,7 +144,7 @@ const FormEducation = props => {
                             name="edenddate2"
                             value={props.form.edenddate2}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -162,7 +162,7 @@ const FormEducation = props => {
                             name="eddescription2"
                             value={props.form.eddescription2}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />

@@ -3,7 +3,7 @@ import './Button.css'
 const Button = props => {
     return (
         <>
-           <button className="next-btn"> {props.children}</button>
+            <button disabled={props.disabled} className="next-btn"> {props.children}</button>
         </>
     )
 }

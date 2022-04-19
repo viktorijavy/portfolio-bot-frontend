@@ -2,11 +2,15 @@ import './FormHeader.css';
 import Button from '../Button';
 
 const FormHeader = props => {
-
- 
     return (
         <>
-
+            {props.errors && (
+                <div>
+                    {Object.values(props.errors).map((error, index) => (
+                        <div key={index}>{error}</div>
+                    ))}
+                </div>
+            )}
             <div className="form-container">
 
                 <form
@@ -26,7 +30,7 @@ const FormHeader = props => {
                             name="name"
                             value={props.form.name}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />
@@ -43,7 +47,7 @@ const FormHeader = props => {
                             maxlength="50"
                             value={props.form.occupation}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -58,7 +62,7 @@ const FormHeader = props => {
                             value={props.form.city}
                             maxlength="25"
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
                         />
                     </div>
@@ -74,12 +78,12 @@ const FormHeader = props => {
                             name="about"
                             value={props.form.about}
                             onChange={e => {
-                                props.setform({ ...props.form, [e.target.name]: e.target.value })
+                                props.validateAndSetForm(e)
                             }}
 
                         />
                     </div>
-                    <Button type="submit">Next</Button>
+                    <Button disabled={Object.keys(props.errors).length > 0} type="submit">Next</Button>
                     
                 </form>
             </div>
