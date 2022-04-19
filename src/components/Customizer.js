@@ -13,12 +13,19 @@ import PresentationContact from './Contacts/PresentationContact';
 import PresentationAbout from './About/PresentationAbout';
 import FormAbout from './About/FormAbout';
 
-
+//TODO add value={props.form.occupation} to all form fields to make them to a controlled component
+//TODO before setform run validationhandler with abstracted setform method
+//TODO make projects, education nestable to have multiple
+//TODO print into html
+//TODO make multiple designs applicable
 
 const Customizer = () => {
-
+    const initialForm = {
+        name: "Maria Musterfrau",
+        occupation: "Frontend developer"
+    }
     const [progress, setProgress] = useState(0)
-    const [form, setform] = useState({})
+    const [form, setform] = useState(initialForm)
     const [userObject, setuserObject] = useState({})
 
 
