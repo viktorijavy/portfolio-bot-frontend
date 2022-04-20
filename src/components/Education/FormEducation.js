@@ -81,7 +81,7 @@ const FormEducation = props => {
                             placeholder="What skills did you learn there"
                             type="text"
                             rows="3" 
-                            maxlength="130"
+                            maxLength="130"
                             name="eddescription1"
                             value={props.form.eddescription1}
                             onChange={e => {
@@ -158,7 +158,7 @@ const FormEducation = props => {
                             placeholder="What skills did you learn there"
                             type="text"
                             rows="3" 
-                            maxlength="130"
+                            maxLength="130"
                             name="eddescription2"
                             value={props.form.eddescription2}
                             onChange={e => {

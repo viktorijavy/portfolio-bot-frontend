@@ -21,6 +21,7 @@ const FormExperience = props => {
                             className="form-input"
                             placeholder="what was your position there?"
                             type="text"
+                            required
                             name="role"
                             value={props.form.role}
                             onChange={e => {
@@ -35,6 +36,7 @@ const FormExperience = props => {
                             className="form-input"
                             placeholder="Add company's name"
                             type="text"
+                            required
                             name="company"
                             value={props.form.company}
                             onChange={e => {
@@ -49,6 +51,7 @@ const FormExperience = props => {
                             className="form-input"
                             placeholder="When did you start there?"
                             type="date"
+                            required
                             name="startdate"
                             value={props.form.startdate}
                             onChange={e => {
@@ -63,6 +66,7 @@ const FormExperience = props => {
                             className="form-input"
                             placeholder="When did you finish?"
                             type="date"
+                            required
                             name="enddate"
                             value={props.form.enddate}
                             onChange={e => {
@@ -78,6 +82,7 @@ const FormExperience = props => {
                             className="form-input"
                             placeholder="Task 1"
                             type="text"
+                            required
                             name="task1"
                             value={props.form.task1}
                             onChange={e => {
@@ -92,6 +97,7 @@ const FormExperience = props => {
                             className="form-input"
                             placeholder="Task 2"
                             type="text"
+                            required
                             name="task2"
                             value={props.form.task2}
                             onChange={e => {
@@ -106,6 +112,7 @@ const FormExperience = props => {
                             className="form-input"
                             placeholder="Task 3"
                             type="text"
+                            required
                             name="task3"
                             value={props.form.task3}
                             onChange={e => {

@@ -12,18 +12,16 @@ import FormContact from './Contacts/FormContact';
 import PresentationContact from './Contacts/PresentationContact';
 import PresentationAbout from './About/PresentationAbout';
 import FormAbout from './About/FormAbout';
+import initialForm from '../initialForm.json';
 
-//TODO add value={props.form.occupation} to all form fields to make them to a controlled component
+
 //TODO before setform run validationhandler with abstracted setform method
 //TODO make projects, education nestable to have multiple
 //TODO print into html
 //TODO make multiple designs applicable
 
 const Customizer = () => {
-    const initialForm = {
-        name: "Maria Musterfrau",
-        occupation: "Frontend developer"
-    }
+
     const [progress, setProgress] = useState(0)
     const [form, setform] = useState(initialForm)
     const [errors, seterrors] = useState({})
@@ -38,7 +36,7 @@ const Customizer = () => {
         localStorage.setItem('progress', progress + 1) // set the current index to the LS, so we can later start directly in level 5
         const newUserObject = { ...userObject, ...currentPayload }  // temp object of the desconstructed new accumulated object what we put ...
         localStorage.setItem("userobject", JSON.stringify(newUserObject)) // ... the LS as a string
-        if (progress === 5) {
+        if (progress === 6) {
             fetch('http://localhost:4000/generate', {
                 method: "POST",
                 headers: {
@@ -50,15 +48,75 @@ const Customizer = () => {
         setuserObject(newUserObject) // put new  big userobject in state
         setProgress(progress + 1)
     }
+
+    console.log(userObject);
+
+    const isValidGithubRepo = (url) => {
+        return url.startsWith("https://github.com") || url.startsWith("http://github.com") ? true : false
+
+    }
+
+    const isValidUrl = (url) => {
+        return url.startsWith("https://") || url.startsWith("http://") ? true : false
+
+    }
+
+    const isValidLinkedinUrl = (url) => {
+        return /^(http(s)?:\/\/)?([\w]+\.)?linkedin\.com\/(pub|in|profile)/gm.test(url);
+    };
+    const isValidGitHubUrl = (url) => {
+        return /^(http(s)?:\/\/)?([\w]+\.)?github\.com\//gm.test(url);
+    };
+
     const validateAndSetForm = e => { //This runs on ALL onchange handlers. You get the event where the target and the name
-        if (e.target.name === 'occupation') {
-            if (e.target.value.length < 4) {
+        if (e.target.name === 'code') {
+
+            if (isValidGithubRepo(e.target.value) === false) {
                 e.target.style.border = "1px solid red"
-                seterrors({ ...errors, occupation: "The occupation should be longer than 2 letters" })
+                seterrors({ ...errors, code: "Should be valid url" })
             } else {
                 e.target.style.border = "0 none"
-                const errrorClone = {...errors} //pure programming => never touch the original object
-                delete errrorClone.occupation
+                const errrorClone = { ...errors } //pure programming => never touch the original object
+                delete errrorClone.code
+                seterrors(errrorClone)
+            }
+
+        }
+
+        if (e.target.value === 'demo') {
+            if (isValidUrl(e.target.value) === false) {
+                e.target.style.border = "1px solid red"
+                seterrors({ ...errors, code: "Should be valid url" })
+            } else {
+                e.target.style.border = "0 none"
+                const errrorClone = { ...errors } 
+                delete errrorClone.demo
+                seterrors(errrorClone)
+            }
+
+        }
+
+        if (e.target.name === 'linkedin') {
+            if (isValidLinkedinUrl(e.target.value) === false) {
+                e.target.style.border = "1px solid red"
+                seterrors({ ...errors, linkedin: "Should be a valid linkedin url" })
+            } else {
+                e.target.style.border = "0 none"
+                const errrorClone = { ...errors } 
+                delete errrorClone.linkedin
+                seterrors(errrorClone)
+            }
+
+        }
+
+        if (e.target.name === 'github') {
+            if (isValidGitHubUrl(e.target.value) === false) {
+                e.target.style.border = "1px solid red"
+                seterrors({ ...errors, github: "Should be a valid github url" })
+            } else {
+                e.target.style.border = "0 none"
+                const errrorClone = { ...errors } 
+                delete errrorClone.github
                 seterrors(errrorClone)
             }
         }
@@ -66,9 +124,11 @@ const Customizer = () => {
         setform({ ...form, [e.target.name]: e.target.value })
     }
 
+
+
     return (
         <div className="main-container-flex">
-            
+
             <div className="customizer-container">
                 {progress === 0 && (<>
                     <PresentationHeader
@@ -90,6 +150,7 @@ const Customizer = () => {
 
                     <FormAbout
                         form={form}
+                        setform={setform}
                         validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
                     />
@@ -101,6 +162,8 @@ const Customizer = () => {
                     />
                     <FormProjects
                         form={form}
+                        errors={errors}
+                        setform={setform}
                         validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
 
@@ -143,6 +206,7 @@ const Customizer = () => {
 
                     <FormContact
                         form={form}
+                        errors={errors}
                         validateAndSetForm={validateAndSetForm}
                         increaseProgress={increaseProgress}
 
@@ -160,4 +224,4 @@ const Customizer = () => {
     )
 }
 
-export default Customizer
+export default Customizer;

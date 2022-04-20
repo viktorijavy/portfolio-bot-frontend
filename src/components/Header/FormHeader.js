@@ -4,13 +4,7 @@ import Button from '../Button';
 const FormHeader = props => {
     return (
         <>
-            {props.errors && (
-                <div>
-                    {Object.values(props.errors).map((error, index) => (
-                        <div key={index}>{error}</div>
-                    ))}
-                </div>
-            )}
+
             <div className="form-container">
 
                 <form
@@ -28,6 +22,7 @@ const FormHeader = props => {
                             placeholder="Your name"
                             type="text"
                             name="name"
+                            required
                             value={props.form.name}
                             onChange={e => {
                                 props.validateAndSetForm(e)
@@ -43,8 +38,9 @@ const FormHeader = props => {
                             placeholder="Your occupation"
                             type="text"
                             name="occupation"
-                            minlength="10"
-                            maxlength="50"
+                            required
+                            minLength="10"
+                            maxLength="50"
                             value={props.form.occupation}
                             onChange={e => {
                                 props.validateAndSetForm(e)
@@ -60,7 +56,8 @@ const FormHeader = props => {
                             type="text"
                             name="city"
                             value={props.form.city}
-                            maxlength="25"
+                            minLength="2"
+                            maxLength="25"
                             onChange={e => {
                                 props.validateAndSetForm(e)
                             }}
@@ -71,10 +68,11 @@ const FormHeader = props => {
                         <label> About </label>
                         <textarea
                             className="form-input"
+                            required
                             placeholder="Add something short about you"
                             type="text"
-                            rows="7" 
-                            maxlength="500"
+                            rows="7"
+                            maxLength="500"
                             name="about"
                             value={props.form.about}
                             onChange={e => {
@@ -84,7 +82,14 @@ const FormHeader = props => {
                         />
                     </div>
                     <Button disabled={Object.keys(props.errors).length > 0} type="submit">Next</Button>
-                    
+
+                    {props.errors && (
+                        <div className="error-message">
+                            {Object.values(props.errors).map((error, index) => (
+                                <div key={index}>*{error}</div>
+                            ))}
+                        </div>
+                    )}
                 </form>
             </div>
         </>

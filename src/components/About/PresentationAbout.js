@@ -1,6 +1,6 @@
 import './PresentationAbout.css'
 import kabute from '../../images/kabutes.png'
-import bluedots from '../../images/small-blue-dots.png'
+
 
 const PresentationAbout = props => {
     return (
@@ -18,7 +18,7 @@ const PresentationAbout = props => {
           </div>
 
           <div className="about-image-box">
-          <img src={props.form.picture} alt="" className="main-image"/>
+          <img src={props.form.picture} alt="profile-pic" className="main-image"/>
           </div>
       </div>
 

@@ -35,7 +35,9 @@ const FormAbout = props => {
                             type="file"
                             name="picture"
                             onChange={e => {
+                              
                                 getBase64(e.target.files[0], e)
+                                props.validateAndSetForm(e)
                             }}
 
                         />
@@ -48,9 +50,13 @@ const FormAbout = props => {
                             className="form-input"
                             placeholder="Add something about you"
                             type="text"
+                            required
                             rows="7"
-                            maxlength="750"
+                            value={props.form.description}
+                            minLength="300"
+                            maxLength="750"
                             name="description"
+                            
                             onChange={e => {
                                 props.validateAndSetForm(e)
                             }}

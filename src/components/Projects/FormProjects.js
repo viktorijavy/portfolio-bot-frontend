@@ -26,11 +26,12 @@ const FormProjects = props => {
                     <h2> Add the best project of yours</h2>
 
                     <div className="form-item">
-                        <label htmlFor="name">Project Name</label>
+                        <label> Project Name</label>
                         <input
                             className="form-input"
                             placeholder="Project Name"
                             type="text"
+                            required
                             name="projectname"
                             value={props.form.projectname}
                             onChange={e => {
@@ -45,6 +46,7 @@ const FormProjects = props => {
                             className="form-input"
                             placeholder="Describe your project shortly"
                             type="text"
+                            required
                             rows='5'
                             name="projectdescription"
                             value={props.form.projectdescription}
@@ -62,9 +64,8 @@ const FormProjects = props => {
                             placeholder="add image"
                             type="file"
                             name="projectimage"
-                            value={props.form.projectimage}
                             onChange={e => {
-
+                                props.validateAndSetForm(e)
                                 getBase64(e.target.files[0], e)
                             }}
                         />
@@ -72,11 +73,12 @@ const FormProjects = props => {
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="technologies"> Technologies </label>
+                        <label> Technologies </label>
                         <input
                             className="form-input"
                             placeholder="Which technologies did you use?"
                             type="text"
+                            required
                             name="technologies"
                             value={props.form.technologies}
                             onChange={e => {
@@ -86,11 +88,12 @@ const FormProjects = props => {
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="code"> Github </label>
+                        <label> Github </label>
                         <input
                             className="form-input"
                             placeholder="Add a link to a github repo"
                             type="text"
+                            required
                             name="code"
                             value={props.form.code}
                             onChange={e => {
@@ -100,7 +103,7 @@ const FormProjects = props => {
                     </div>
 
                     <div className="form-item">
-                        <label htmlFor="demo"> Demo </label>
+                        <label> Demo </label>
                         <input
                             className="form-input"
                             placeholder="Add a link to a demo"
@@ -115,8 +118,19 @@ const FormProjects = props => {
 
 
 
-                    <Button type="submit"> Add Project</Button>
+                    
+                    <Button disabled={Object.keys(props.errors).length > 0} type="submit"> Next</Button>
+                 
+                    {props.errors && (
+                        <div className="error-message">
+                            {Object.values(props.errors).map((error, index) => (
+                                <div key={index}>*{error}</div>
+                            ))}
+                        </div>
+                    )}
+                    
                 </form>
+
             </div>
         </>
     )

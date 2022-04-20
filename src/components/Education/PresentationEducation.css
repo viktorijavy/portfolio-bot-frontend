@@ -1,10 +1,11 @@
 .education-image {
-    width: 20rem;
+    width: 15rem;
 }
 
 .education-box {
     
     width: 80%;
+    height:70rem;
     display: flex;
     flex-direction: column;
     align-items: center;
