@@ -15,7 +15,7 @@ const Portfolio = () => {
 
         <div className="portfolio-box">
 
-            <div className="relative">
+            <div className="portfolio">
                 <div className="component-1">
                     <PresentationHeader form={form} />
                 </div>

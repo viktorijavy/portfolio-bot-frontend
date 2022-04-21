@@ -5,6 +5,7 @@
     flex-direction: row;
     align-items: center;  
     background-color: #1D1D1D;
+    background-color: black;
     color: white;
     border-radius: 15px 0 0 15px;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -31,7 +32,7 @@
     align-items: center;
 }
 .project-img {
-    max-width: 80%;
+    width: 30rem;
     border-radius: 15px;
 }
 

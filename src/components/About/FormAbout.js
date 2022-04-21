@@ -37,7 +37,8 @@ const FormAbout = props => {
                             onChange={e => {
                               
                                 getBase64(e.target.files[0], e)
-                                props.validateAndSetForm(e)
+                                //props.validateAndSetForm(e)
+
                             }}
 
                         />

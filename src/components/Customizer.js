@@ -36,6 +36,8 @@ const Customizer = () => {
         localStorage.setItem('progress', progress + 1) // set the current index to the LS, so we can later start directly in level 5
         const newUserObject = { ...userObject, ...currentPayload }  // temp object of the desconstructed new accumulated object what we put ...
         localStorage.setItem("userobject", JSON.stringify(newUserObject)) // ... the LS as a string
+        setuserObject(newUserObject) // put new  big userobject in state
+        setProgress(progress + 1)
         if (progress === 6) {
             fetch('http://localhost:4000/generate', {
                 method: "POST",
@@ -45,19 +47,17 @@ const Customizer = () => {
                 body: JSON.stringify(newUserObject)
             })
         }
-        setuserObject(newUserObject) // put new  big userobject in state
-        setProgress(progress + 1)
     }
 
     console.log(userObject);
 
     const isValidGithubRepo = (url) => {
-        return url.startsWith("https://github.com") || url.startsWith("http://github.com") ? true : false
+        return "" === url || (url.startsWith("https://github.com/") || url.startsWith("http://github.com/"))
 
     }
 
     const isValidUrl = (url) => {
-        return url.startsWith("https://") || url.startsWith("http://") ? true : false
+        return url.startsWith("https://") || url.startsWith("http://")
 
     }
 
