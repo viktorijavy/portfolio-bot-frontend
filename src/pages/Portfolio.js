@@ -20,19 +20,19 @@ const Portfolio = () => {
                     <PresentationHeader form={form} />
                 </div>
 
-                <div className="component-2">
+                <div className="component-1">
                     <PresentationAbout form={form} />
                 </div>
-                <div className="component-3">
+                <div className="component-1">
                     <PresentationProjects form={form} />
                 </div>
-                <div className="component-4">
+                <div className="component-1">
                     <PresentationExperience form={form} />
                 </div>
-                <div className="component-5">
+                <div className="component-1">
                     <PresentationEducation form={form} />
                 </div>
-                <div className="component-6">
+                <div className="component-1">
                     <PresentationContact form={form} />
                 </div>
             </div>

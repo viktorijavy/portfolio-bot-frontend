@@ -1,5 +1,5 @@
 import Button from "../Button";
-import { Link } from 'react-router-dom';
+
 
 const FormContact = props => {
     return (
@@ -17,6 +17,7 @@ const FormContact = props => {
                     <div className="form-item">
                         <label htmlFor="name"> Title</label>
                         <input
+                            
                             className="form-input"
                             placeholder="for example... 'Interested in working together?' "
                             type="text"
@@ -103,8 +104,8 @@ const FormContact = props => {
 
                         />
                     </div>
+                    <Button disabled={Object.keys(props.errors).length > 0} type="submit"> Show resume</Button>
 
-                 <Link to="/portfolio"><Button disabled={Object.keys(props.errors).length > 0} type="submit"> Submit </Button> </Link> 
 
                  {props.errors && (
                         <div className="error-message">

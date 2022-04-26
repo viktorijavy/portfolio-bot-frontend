@@ -19,26 +19,32 @@ import initialForm from '../initialForm.json';
 //TODO make projects, education nestable to have multiple
 //TODO print into html
 //TODO make multiple designs applicable
+import { useNavigate } from "react-router-dom";
 
 const Customizer = () => {
 
-    const [progress, setProgress] = useState(0)
+    let searchParams = new URLSearchParams(window.location.search);
+    const [progress, setProgress] = useState(Number(searchParams.get("progress")) || 0)
     const [form, setform] = useState(initialForm)
     const [errors, seterrors] = useState({})
     const [userObject, setuserObject] = useState({})
+    let navigate = useNavigate();
 
-
-    const increaseProgress = (e) => {
+    const submitFormAndIncreaseProgresGenerate = (e) => {
 
         e.preventDefault()
         let currentPayload = {}  //create empty object for accumulation of new form data
-        Array.from(e.target.elements).map(i => currentPayload[i.name] = i.value)  // get new form entries from form and put it int that object {name: "heyr", age: 15 ...}
+        Array.from(e.target.elements).filter(el => el.type !== 'submit').map(i => currentPayload[i.name] = i.value)  // get new form entries from form and put it int that object {name: "heyr", age: 15 ...}
         localStorage.setItem('progress', progress + 1) // set the current index to the LS, so we can later start directly in level 5
         const newUserObject = { ...userObject, ...currentPayload }  // temp object of the desconstructed new accumulated object what we put ...
         localStorage.setItem("userobject", JSON.stringify(newUserObject)) // ... the LS as a string
         setuserObject(newUserObject) // put new  big userobject in state
         setProgress(progress + 1)
-        if (progress === 6) {
+        searchParams.set('progress', progress + 1)
+        //TODO  set as current url
+        if (progress === 5) {
+            navigate("/portfolio", { replace: true });
+
             fetch('http://localhost:4000/generate', {
                 method: "POST",
                 headers: {
@@ -46,6 +52,10 @@ const Customizer = () => {
                 },
                 body: JSON.stringify(newUserObject)
             })
+                .then(res => res.json())
+                .then(res => {
+                    console.log(res);
+                })
         }
     }
 
@@ -89,7 +99,7 @@ const Customizer = () => {
                 seterrors({ ...errors, code: "Should be valid url" })
             } else {
                 e.target.style.border = "0 none"
-                const errrorClone = { ...errors } 
+                const errrorClone = { ...errors }
                 delete errrorClone.demo
                 seterrors(errrorClone)
             }
@@ -102,7 +112,7 @@ const Customizer = () => {
                 seterrors({ ...errors, linkedin: "Should be a valid linkedin url" })
             } else {
                 e.target.style.border = "0 none"
-                const errrorClone = { ...errors } 
+                const errrorClone = { ...errors }
                 delete errrorClone.linkedin
                 seterrors(errrorClone)
             }
@@ -115,7 +125,7 @@ const Customizer = () => {
                 seterrors({ ...errors, github: "Should be a valid github url" })
             } else {
                 e.target.style.border = "0 none"
-                const errrorClone = { ...errors } 
+                const errrorClone = { ...errors }
                 delete errrorClone.github
                 seterrors(errrorClone)
             }
@@ -131,16 +141,20 @@ const Customizer = () => {
 
             <div className="customizer-container">
                 {progress === 0 && (<>
-                    <PresentationHeader
-                        form={form}
-                    />
 
-                    <FormHeader
-                        form={form}
-                        errors={errors}
-                        validateAndSetForm={validateAndSetForm}
-                        increaseProgress={increaseProgress}
-                    />
+                    
+                        <PresentationHeader
+                            form={form}
+                        />
+                   
+                        <FormHeader
+                            form={form}
+                            errors={errors}
+                            validateAndSetForm={validateAndSetForm}
+                            increaseProgress={submitFormAndIncreaseProgresGenerate}
+                        />
+
+                  
                 </>)}
 
                 {progress === 1 && (<>
@@ -152,7 +166,7 @@ const Customizer = () => {
                         form={form}
                         setform={setform}
                         validateAndSetForm={validateAndSetForm}
-                        increaseProgress={increaseProgress}
+                        increaseProgress={submitFormAndIncreaseProgresGenerate}
                     />
                 </>)}
 
@@ -165,7 +179,7 @@ const Customizer = () => {
                         errors={errors}
                         setform={setform}
                         validateAndSetForm={validateAndSetForm}
-                        increaseProgress={increaseProgress}
+                        increaseProgress={submitFormAndIncreaseProgresGenerate}
 
                     />
                 </>)}
@@ -177,7 +191,7 @@ const Customizer = () => {
                     <FormExperience
                         form={form}
                         validateAndSetForm={validateAndSetForm}
-                        increaseProgress={increaseProgress}
+                        increaseProgress={submitFormAndIncreaseProgresGenerate}
 
                     />
 
@@ -192,7 +206,7 @@ const Customizer = () => {
                     <FormEducation
                         form={form}
                         validateAndSetForm={validateAndSetForm}
-                        increaseProgress={increaseProgress}
+                        increaseProgress={submitFormAndIncreaseProgresGenerate}
 
                     />
 
@@ -208,7 +222,7 @@ const Customizer = () => {
                         form={form}
                         errors={errors}
                         validateAndSetForm={validateAndSetForm}
-                        increaseProgress={increaseProgress}
+                        increaseProgress={submitFormAndIncreaseProgresGenerate}
 
                     />
 
